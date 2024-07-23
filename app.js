@@ -106,7 +106,7 @@ app.get('/', (req, res) => {
 })
 
 //ROTA PRIVADA
-app.get("/user/:id", async (req, res) => {
+app.get("/user/:id", checkToken, async (req, res) => {
 
     const id = req.params.id; 
 
@@ -118,6 +118,15 @@ app.get("/user/:id", async (req, res) => {
     res.status(200).json({user})
     
 })
+
+function checkToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(" ")[1]
+
+    if(!token) {
+        return res.status(401).json({msg: "acesso negado!"})
+    }
+}
 
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.brvcgx7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`).then(()=> {
     app.listen(3000);
