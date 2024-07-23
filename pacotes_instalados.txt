@@ -6,3 +6,5 @@ dotenv - serve para ter um arquivo de configuração para armazenar chaves de ap
 express 
 jsonwebtoken - serve para criar o token e verificar se é válido ou não. 
 mongoose - banco de dados 
+
+parei nos 25 minutos
