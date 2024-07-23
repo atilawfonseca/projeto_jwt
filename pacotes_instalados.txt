@@ -1,0 +1,5 @@
+bcrypt - ele pega a senha crua do usuário e transforma em um hash... tbm consegue decodificar a senha. 
+dotenv - serve para ter um arquivo de configuração para armazenar chaves de api, domínio de banco de dados etc. 
+express 
+jsonwebtoken - serve para criar o token e verificar se é válido ou não. 
+mongoose - banco de dados 
