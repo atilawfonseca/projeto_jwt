@@ -1,3 +1,6 @@
+link do video:
+https://www.youtube.com/watch?v=qEBoZ8lJR3k
+
 bcrypt - ele pega a senha crua do usuário e transforma em um hash... tbm consegue decodificar a senha. 
 dotenv - serve para ter um arquivo de configuração para armazenar chaves de api, domínio de banco de dados etc. 
 express 
